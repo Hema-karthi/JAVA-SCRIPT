@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2 id="mainTitle"> welcome to DOM</h2>
+        <p id="myPara">This is original content.</p>
+        <p id="myText">This is some text.</p>
+
+       <button onclick="useGetElementById()"> Get element by id </button> 
+        <button onclick="changeStyles()"> change style</button>
+        <button onclick="changeText()"> change Text.</button>
+        <button onclick="changeStyle()">Change Style</button>
+
+<script>
+
+            function useGetElementById() {
+            const title = document.getElementById("mainTitle");
+            title.textContent ="changed using getElementById";
+              }
+           function changeStyles(){
+             const title = document.getElementById("mainTitle");
+             title.style.color="blue"
+             title.style.fontSize="28px";
+             title.style.backgroundColor = "#e0f7fa";
+           }   
+           function changeText() {
+            const box =document.getElementById("myPara");
+            box.innerHTML="Content has been changed!";
+        
+             }
+
+
+           function changeStyle() {
+           const text = document.getElementById("myText");
+            text.style.color = "blue";        
+            text.style.fontSize = "24px";     
+        }
+</script>
+
+
+    
+</body>
+</html>
