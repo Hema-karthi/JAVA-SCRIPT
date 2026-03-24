@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <button id="myButtton"> books collection </button>
+     <p id="output"></p>
+
+     <input type="text" id="myInput" placeholder="type here.....">
+     <p id="display"> </p>
+
+     <form id="myform">
+        <label for="name"> Name:</label>
+        <input type="text" id="name" name="name" required >
+        <button type="submit">submit form</button>
+     </form>
+     <p id="formMessage"></p>
+    
+        <h2> print after 2 second sync</h2>
+        <button onclick="loading()">click for print </button>
+        <p id="print"> click me to print</p>
+
+         <h3> counter example for setInterval</h3>
+         <button id="start">start</button>
+         <button id="stop">stop</button>
+        <p id="counter">0</p>
+
+     <script>
+        //Add button click event.... 
+        const myButton = document.getElementById("myButtton");
+        const output = document.getElementById("output");
+        myButton.addEventListener("click",function(){
+            output.textContent=" books listed";
+        });
+        //show input value..
+        const inputfeild = document.getElementById("myInput");
+        const displayOutput = document.getElementById("display");
+
+            inputfeild.addEventListener("input",function(){
+            displayOutput.textContent = "input value:" +inputfeild.value;
+        }); 
+        //submit event....
+        const form = document.getElementById("myform");
+        const submitMessage = document.getElementById("formMessage")
+         
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            const name = document.getElementById("name");
+            submitMessage.textContent = "form submitted :"+ name;
+        });
+
+        //print message aftert 2 second  
+        function loading(){
+            const printOut = document.getElementById("print");
+            printOut.textContent=" printing please wait ......"
+
+        setTimeout(function(){
+            printOut.textContent = "hiii hello iam here glad to invite you to my page !"
+        
+        }, 2000);
+    }
+        //setInterval.....
+         let count = 0;
+         let intervalId;
+         document.getElementById("start").onclick = function(){
+         clearInterval(intervalId);
+           intervalId = setInterval(function(){
+            count++;
+          document.getElementById("counter").textContent = count; 
+          }, 1000);
+           };
+        document.getElementById("stop").onclick = function(){
+        clearInterval(intervalId);
+       };
+    
+
+
+     </script>
+</body>
+</html>
