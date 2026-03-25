@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>use push, pop, shift, unshift on an array</h2>
+    <button onclick="addAtEnd()">Array push()</button>
+     <button onclick="removeAtEnd()"> Array pop() </button>
+     <button onclick="removeFirst()">Array shift()</button>
+     <button onclick="addAtFirst()">Array unshift()</button>
+
+      <p id="display"> Text here</p>
+    <script>
+        let colors=["red","blue","orange","yellow","black"];
+        function addAtEnd() {
+            colors.push("green");
+            document.getElementById("display").innerText="push():'green'"   ;
+
+        }
+        function removeAtEnd(){
+            let removed = colors.pop();
+            document.getElementById("display").innerText="pop():"+ removed;
+
+        }
+        function removeFirst(){
+            let removed = colors.shift(); 
+            document.getElementById("display").innerText ="shift():removed " + removed;
+
+        } removeFirst()
+        function addAtFirst(){
+            colors.unshift("purple");
+            document.getElementById("display").innerText ="unshift(): add 'purple'"
+        }
+    </script>
+</body>
+</html>
