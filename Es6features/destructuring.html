@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //destructuring...object
+        const person = {
+            name : "Aadhya",
+            course :"Mathematics",
+            Age : 4
+        };
+        const{name,course} = person;
+        console.log(`Desstructuring name : ${name} , Destructuring course: ${course}`);
+
+        //Array destructuring ...
+        const marks =  [33,76,89,90,67];
+        const [firstMark , secondMark] = marks;
+        console.log(` Destructuring array scores :${firstMark},${secondMark}`);
+
+        //spread operators....
+        const numbers = [1,2,3,4,5,6];
+        const string = [11,12,13,14,15,22];
+        const combine = [...numbers, ...string];
+        console.log ("combined array=",combine);
+
+        //ternary operator....
+        const sugarLevel = 260;
+        const result = sugarLevel >= 300 ? "abnormal":"normal";
+        console.log("Result:",result);
+
+         //Arrow function ....
+        const addArrow = (a, b) => a + b;
+        console.log(addArrow(5, 3));
+
+        
+    </script>
+    
+    </script>
+</body>
+</html>

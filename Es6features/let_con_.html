@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        //Rewrite  let and const..
+        const name = "Hema";
+        let age = 25;
+
+         //Template literal with variable..
+        console.log(`name of the person : ${name}  , age of the person : ${age}`);
+
+
+        //default parameters...
+        function greet(name= "Aadhya"){
+            return `welcome  ${name}`;
+        };
+        const greet1 = greet("karthik");
+        const greet2 = greet ();
+        console.log("greet:" ,greet1 );
+        console.log("greet:", greet2 );
+
+</script>
+</body>
+</html>
