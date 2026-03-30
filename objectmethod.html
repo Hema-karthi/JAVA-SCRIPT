@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        Button{
+         border: 10px;color: black;solod;
+         padding: 10px;
+         margin: 10PX;
+         background-color: rgb(0, 255, 191) ;
+         
+                }
+    </style>
+</head>
+<body>
+    <h1> object properties</h1>
+    <button onclick="updateName()">UPDATION</button>
+    <p id="output"> </p>
+    <script>
+        const person = {
+            name :"Hemalatha",
+            age : 28,
+            course : "fullstack",
+         sayhello : function(){
+                console.log("hello my name is: " + this.name);
+            }
+        };      
+        console.log("name:",person .name );
+        console.log("age:",person.age);
+        const name = person.name;
+        const age = person.age;
+        
+
+    person.name = "Aadhya";
+    person.age = 4;
+    const newName = person.name;
+    const newAge= person.age;
+
+    console.log("update name:"+newName+ "   "+ "update age:"+newAge);
+    person.sayhello();
+
+   function updateName(){
+   document.getElementById("output").innerHTML= ("<pre>"+ JSON.stringify(person,null,2)+"<pre>");
+   } ;    
+   
+   </script>
+
+</body>
+</html>
