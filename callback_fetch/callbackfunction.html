@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="getData"></div>
+    <script>
+      function add(a,b,callback){
+        let result = a+b;
+        console.log ("addition")
+        callback(result);
+       }
+       function addtion(result){
+        console.log("result:",result);
+        
+       } add(5,6,addtion);
+    </script>
+
+    
+    
+</body>
+</html>
